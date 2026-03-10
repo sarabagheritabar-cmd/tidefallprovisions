@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tidefall Provisions - Premium Fresh Produce Supplier</title>
+  <link rel="icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com?v=3.4.0"></script>
+  <style>
+    :root {
+        --primary: oklch(0.55 0.15 140);
+        --primary-light: oklch(0.85 0.05 140);
+        --surface: oklch(0.95 0.02 140);
+        --shadow-dark: rgba(163, 177, 198, 0.4);
+        --shadow-light: rgba(255, 255, 255, 0.7);
+        --text-main: oklch(0.25 0.05 140);
+    }
+    body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: var(--text-main);
+        background-color: var(--surface);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Crimson Pro', serif;
+        font-weight: 700;
+    }
+    .neomorphic-card {
+        background: var(--surface);
+        border-radius: 4px;
+        box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+        transition: transform 0.3s ease-in-out;
+    }
+    .neomorphic-card:hover {
+        transform: scale(1.03);
+    }
+    .neomorphic-inset {
+        background: var(--surface);
+        border-radius: 12px;
+        box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+    }
+    .btn-primary {
+        background: var(--primary);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-weight: 700;
+        box-shadow: 2px 2px 4px var(--shadow-dark), -2px -2px 4px var(--shadow-light);
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px var(--shadow-dark), 0 -4px 8px var(--shadow-light);
+    }
+    .nav-link {
+        color: var(--text-main);
+        padding: 8px 16px;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        border-radius: 4px;
+    }
+    .nav-link:hover {
+        color: var(--primary);
+        background-color: var(--primary-light);
+    }
+    .form-input {
+        background: var(--surface);
+        border: none;
+        border-radius: 4px;
+        padding: 12px 16px;
+        box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+        color: var(--text-main);
+        width: 100%;
+        transition: box-shadow 0.2s ease-in-out;
+    }
+    .form-input:focus {
+      outline: none;
+      box-shadow: inset 1px 1px 3px var(--shadow-dark), inset -1px -1px 3px var(--shadow-light), 0 0 0 3px oklch(0.85 0.05 140 / 0.5);
+    }
+    .neomorphic-icon-wrapper {
+        background: var(--surface);
+        border-radius: 12px; /* For image wrappers specifically */
+        box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+    }
+    .cookie-banner {
+        background-color: oklch(0.25 0.05 140); /* Darker background for contrast */
+        color: white;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    }
+    .cookie-banner button {
+        background-color: var(--primary);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        margin-left: 1rem;
+        transition: background-color 0.2s ease-in-out;
+    }
+    .cookie-banner button:hover {
+        background-color: oklch(0.65 0.20 140);
+    }
+    
+  </style>
+</head>
+<body class=" antialiased">
+  <header class="bg-surface sticky top-0 z-50 shadow-md">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between flex-wrap md:flex-nowrap">
+      <div class="flex-grow flex justify-start items-center order-2 md:order-1 md:flex-grow-0">
+        <ul class="flex flex-wrap text-sm gap-x-6 gap-y-2">
+          <li><a href="#produce" class="nav-link">Our Produce</a></li>
+          <li><a href="#sourcing" class="nav-link">Sourcing</a></li>
+          <li><a href="#process" class="nav-link">B2B Process</a></li>
+        </ul>
+      </div>
+
+      <div class="flex-shrink-0 mx-auto order-1 md:order-2">
+        <a href="#" class="text-xl font-bold font-crimson text-text-main">Tidefall Provisions</a>
+      </div>
+      
+      <div class="flex-grow flex justify-end items-center order-3 mt-4 md:mt-0">
+        <ul class="flex flex-wrap text-sm gap-x-6 gap-y-2">
+          <li><a href="#partners" class="nav-link">Partners</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+          <li><a href="#contact" class="btn-primary ml-4">Place Order</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<main>
+<style>
+  #privacy-policy-section {
+    padding-top: 7rem; 
+  }
+</style>
+<section id="privacy-policy-section">
+    <h2 style="font-size: 1.875rem; font-weight: 700; margin-bottom: 1.5rem;">Privacy Policy of Tidefall Provisions</h2>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">At Tidefall Provisions, we are committed to protecting the privacy and security of information collected from our customers and visitors to our online platform. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you interact with our site, which showcases our premium fresh fruits, vegetables, and specialty produce.</p>
+
+    <h3 style="font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">1. Information We Collect</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">We collect information that helps us provide our B2B services efficiently and effectively. This may include:</p>
+    <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Personal Identification Information:</strong> This includes names, business email addresses, phone numbers, and business addresses. We collect this data when you register an account, request a quote, place an order, or subscribe to our newsletters on our online platform.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Business Information:</strong> Details about your restaurant, hotel, or gourmet market, including company name, tax ID, and purchasing preferences, are collected to tailor our services to your specific needs.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Transaction Data:</strong> Information related to your orders, including products purchased, pricing, delivery details, and payment information (though we do not store full credit card details on our servers).</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Usage Data:</strong> Information about how you access and use our site, such as your IP address, browser type, operating system, referral sources, pages viewed, and the dates/times of your visits. This helps us understand user behavior and improve our online platform.</li>
+    </ul>
+
+    <h3 style="font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">2. How We Use Your Information</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">The information we collect is used for various purposes to provide and improve our services:</p>
+    <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">To process and fulfill your orders for fresh produce.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">To manage your account and provide customer support.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">To communicate with you about your orders, product availability, special offers, and seasonal selections.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">To improve our product offerings, our online platform, and overall customer experience.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">To comply with legal obligations and enforce our terms and conditions.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">For internal analytics and market research to better understand our customer base and their needs.</li>
+    </ul>
+
+    <h3 style="font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">3. Disclosure of Your Information</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">We may disclose your information in the following situations:</p>
+    <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Service Providers:</strong> We may share your data with third-party vendors, consultants, and other service providers who perform services for us or on our behalf, such as payment processing, data analysis, email delivery, hosting services, and customer care.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Legal Requirements:</strong> We may disclose your information when required to do so by law or in response to valid requests by public authorities (e.g., a court or government agency).</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Business Transfers:</strong> In connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Protection of Rights:</strong> We may disclose your information where we believe it is necessary to investigate, prevent, or take action regarding potential violations of our policies, suspected fraud, situations involving potential threats to the safety of any person, and illegal activities, or as evidence in litigation in which we are involved.</li>
+    </ul>
+
+    <h3 style="font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">4. Data Security</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">We implement appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, please also remember that we cannot guarantee that the Internet itself is 100% secure. Although we will do our best to protect your personal information, transmission of personal information to and from our online platform is at your own risk. You should only access the services within a secure environment.</p>
+
+    <h3 style="font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">5. Data Retention</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements). When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymize it, or, if this is not possible (for example, because your personal information has been stored in backup archives), then we will securely store your personal information and isolate it from any further processing until deletion is possible.</p>
+
+    <h3 style="font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">6. Your Data Protection Rights</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">Depending on your location, you may have the following rights concerning your personal data:</p>
+    <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">The right to access – You have the right to request copies of your personal data.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">The right to rectification – You have the right to request that we correct any information you believe is inaccurate or complete information you believe is incomplete.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions.</li>
+        <li style="font-size: 1rem; margin-bottom: 0.5rem;">The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</li>
+    </ul>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">To exercise any of these rights, please contact us using the contact details provided below.</p>
+
+    <h3 style="font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">7. Changes to This Privacy Policy</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. We encourage you to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+
+    <h3 style="font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">8. Contact Us</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+    <p style="font-size: 1rem; margin-bottom: 0.5rem;">Tidefall Provisions</p>
+    <p style="font-size: 1rem; margin-bottom: 0.5rem;">171 Jefferson Street</p>
+    <p style="font-size: 1rem; margin-bottom: 0.5rem;">New York, New York 11206</p>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">USA</p>
+</section>
+</main>
+<footer class="bg-gradient-to-r from-oklch(0.25 0.05 140) to-oklch(0.15 0.02 160) text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm">© 2024 Tidefall Provisions. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-6">
+        <a href="./privacy.html" class="text-white hover:text-primary-light text-sm">Privacy Policy</a>
+        <a href="./tos.html" class="text-white hover:text-primary-light text-sm">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookieConsent" class="cookie-banner hidden">
+    <p>This website uses cookies to ensure you get the best experience. By continuing to use our site, you agree to our <a href="./privacy.html" class="underline hover:no-underline text-primary-light">Privacy Policy</a>.</p>
+    <button id="acceptCookies">Accept</button>
+  </div>
+
+  <script>
+    // Testimonials Carousel Logic
+    let currentSlide = 0;
+    const carousel = document.querySelector('[data-carousel-items]');
+    const totalSlides = carousel.children.length;
+
+    function showSlide(index) {
+        // Adjust for responsive display: On mobile (sm:), show 1 slide per view
+        // On larger screens (md:), show 3 slides per view, but this specific UI seems to be 1 per view on sm and 3 logical "slots" for md+.
+        // The current plan has only 3 testimonials. A true carousel would need more items or cloning.
+        // For simplicity, this will cycle through the 3 items as if they are separate slides,
+        // which works well for mobile (1 item/view) and minimally for desktop (3 items/view, but still scrolls 1 unit at a time).
+        let slideWidth = carousel.children[0].offsetWidth; // Get width of one item
+        if (window.innerWidth >= 768) { // If md breakpoint or larger
+            // Assuming 3 items visible, we effectively only have 1 scrollable "group" if totalSlides is 3.
+            // If totalSlides > 3, then it would scroll groups of 1/3 (item width)
+            // For 3 items and 3 visible, there's no actual "scroll" required.
+            // But if there were more, let's keep it robust.
+            // If we want 1 item to slide, the `translateX` should be based on 1 item.
+            // If totalSlides is 3, and we want to cycle them, current index 0,1,2 makes sense.
+            // Visually for 3 items on desktop, it likely shows all at once.
+            // So on desktop, let's just snap to first position (0) if there are 3 items.
+            // If more, it would be based on 1/3.
+            if (totalSlides <= 3) {
+                index = 0; // Show all 3 if less than or equal to 3 for desktop-like views.
+            }
+        }
+        carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        if (window.innerWidth < 768) { // Mobile behavior, 1 slide at a time
+            currentSlide = (currentSlide + 1) % totalSlides;
+        } else { // Desktop behavior, show 3 at a time, or cycle if less
+            if (totalSlides <= 3) {
+              currentSlide = 0; // If 3 or less, cycle to start visually
+            } else {
+              currentSlide = (currentSlide + 1) % totalSlides; // For more slides, behave like a normal carousel.
+            }
+        }
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        if (window.innerWidth < 768) { // Mobile behavior, 1 slide at a time
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        } else { // Desktop behavior
+            if (totalSlides <= 3) {
+              currentSlide = 0; // If 3 or less, cycle to start visually
+            } else {
+              currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            }
+        }
+        showSlide(currentSlide);
+    }
+
+    // Initialize carousel on load
+    window.addEventListener('load', () => {
+        showSlide(0);
+    });
+    // Re-adjust on resize
+    window.addEventListener('resize', () => {
+        showSlide(0); // Reset to first slide on resize to recalculate `slideWidth`
+    });
+
+    // Cookie Consent Logic
+    const cookieConsentBanner = document.getElementById('cookieConsent');
+    const acceptCookiesButton = document.getElementById('acceptCookies');
+    const COOKIE_NAME_PREFIX = "consent_"; // For dynamic name generation
+    const COOKIE_NAME = COOKIE_NAME_PREFIX + Math.random().toString(36).substring(2, 10); // Random unique name
+
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+    }
+
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    window.onload = () => {
+        if (!getCookie(COOKIE_NAME)) {
+            cookieConsentBanner.classList.remove('hidden');
+        }
+    };
+
+    acceptCookiesButton.onclick = () => {
+        setCookie(COOKIE_NAME, "accepted", 365); // Store consent for 1 year
+        cookieConsentBanner.classList.add('hidden');
+    };
+  </script>
+</body>
+</html>

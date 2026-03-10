@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tidefall Provisions - Premium Fresh Produce Supplier</title>
+  <link rel="icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com?v=3.4.0"></script>
+  <style>
+    :root {
+        --primary: oklch(0.55 0.15 140);
+        --primary-light: oklch(0.85 0.05 140);
+        --surface: oklch(0.95 0.02 140);
+        --shadow-dark: rgba(163, 177, 198, 0.4);
+        --shadow-light: rgba(255, 255, 255, 0.7);
+        --text-main: oklch(0.25 0.05 140);
+    }
+    body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: var(--text-main);
+        background-color: var(--surface);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Crimson Pro', serif;
+        font-weight: 700;
+    }
+    .neomorphic-card {
+        background: var(--surface);
+        border-radius: 4px;
+        box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+        transition: transform 0.3s ease-in-out;
+    }
+    .neomorphic-card:hover {
+        transform: scale(1.03);
+    }
+    .neomorphic-inset {
+        background: var(--surface);
+        border-radius: 12px;
+        box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+    }
+    .btn-primary {
+        background: var(--primary);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-weight: 700;
+        box-shadow: 2px 2px 4px var(--shadow-dark), -2px -2px 4px var(--shadow-light);
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px var(--shadow-dark), 0 -4px 8px var(--shadow-light);
+    }
+    .nav-link {
+        color: var(--text-main);
+        padding: 8px 16px;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        border-radius: 4px;
+    }
+    .nav-link:hover {
+        color: var(--primary);
+        background-color: var(--primary-light);
+    }
+    .form-input {
+        background: var(--surface);
+        border: none;
+        border-radius: 4px;
+        padding: 12px 16px;
+        box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+        color: var(--text-main);
+        width: 100%;
+        transition: box-shadow 0.2s ease-in-out;
+    }
+    .form-input:focus {
+      outline: none;
+      box-shadow: inset 1px 1px 3px var(--shadow-dark), inset -1px -1px 3px var(--shadow-light), 0 0 0 3px oklch(0.85 0.05 140 / 0.5);
+    }
+    .neomorphic-icon-wrapper {
+        background: var(--surface);
+        border-radius: 12px; /* For image wrappers specifically */
+        box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+    }
+    .cookie-banner {
+        background-color: oklch(0.25 0.05 140); /* Darker background for contrast */
+        color: white;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    }
+    .cookie-banner button {
+        background-color: var(--primary);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        margin-left: 1rem;
+        transition: background-color 0.2s ease-in-out;
+    }
+    .cookie-banner button:hover {
+        background-color: oklch(0.65 0.20 140);
+    }
+    
+  </style>
+</head>
+<body class=" antialiased">
+  <header class="bg-surface sticky top-0 z-50 shadow-md">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between flex-wrap md:flex-nowrap">
+      <div class="flex-grow flex justify-start items-center order-2 md:order-1 md:flex-grow-0">
+        <ul class="flex flex-wrap text-sm gap-x-6 gap-y-2">
+          <li><a href="#produce" class="nav-link">Our Produce</a></li>
+          <li><a href="#sourcing" class="nav-link">Sourcing</a></li>
+          <li><a href="#process" class="nav-link">B2B Process</a></li>
+        </ul>
+      </div>
+
+      <div class="flex-shrink-0 mx-auto order-1 md:order-2">
+        <a href="#" class="text-xl font-bold font-crimson text-text-main">Tidefall Provisions</a>
+      </div>
+      
+      <div class="flex-grow flex justify-end items-center order-3 mt-4 md:mt-0">
+        <ul class="flex flex-wrap text-sm gap-x-6 gap-y-2">
+          <li><a href="#partners" class="nav-link">Partners</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+          <li><a href="#contact" class="btn-primary ml-4">Place Order</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<main>
+<style>
+  #tidefall-terms-and-conditions {
+    padding-top: 7rem;
+  }
+</style>
+<section id="tidefall-terms-and-conditions">
+  <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 2rem;">Terms and Conditions for Tidefall Provisions</h2>
+
+  <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+    Welcome to Tidefall Provisions, a dedicated supplier of premium fresh produce. These Terms and Conditions govern your use of our official website and the services offered therein. By accessing or using our online platform, you agree to be bound by these Terms and Conditions. Please review them carefully.
+  </p>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">1. Acceptance of Terms</h3>
+  <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+    By accessing and using our website, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions, as well as our Privacy Policy. If you do not agree with any part of these Terms, you must not use our website or services. These Terms apply to all visitors, users, and others who access or use our Service.
+  </p>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">2. Services Provided</h3>
+  <p style="font-size: 1rem; margin-bottom: 1rem;">
+    Tidefall Provisions specializes in sourcing and distributing premium fresh fruits, vegetables, and specialty produce. Our target clientele includes restaurants, hotels, and gourmet markets. Our online platform is designed to:
+  </p>
+  <ul style="font-size: 1rem; margin-left: 2rem; margin-bottom: 1.5rem; list-style: disc;">
+    <li style="margin-bottom: 0.5rem;">Showcase our extensive range of fresh produce offerings.</li>
+    <li style="margin-bottom: 0.5rem;">Facilitate business-to-business (B2B) inquiries and order placements.</li>
+    <li style="margin-bottom: 0.5rem;">Provide information on seasonal and exotic selections.</li>
+  </ul>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">3. User Obligations</h3>
+  <p style="font-size: 1rem; margin-bottom: 1rem;">
+    As a user of our site, you agree to:
+  </p>
+  <ul style="font-size: 1rem; margin-left: 2rem; margin-bottom: 1.5rem; list-style: disc;">
+    <li style="margin-bottom: 0.5rem;">Provide accurate, current, and complete information during any registration or inquiry process.</li>
+    <li style="margin-bottom: 0.5rem;">Use our website and services only for lawful purposes and in a manner that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of our platform.</li>
+    <li style="margin-bottom: 0.5rem;">Maintain the confidentiality of any account credentials and be responsible for all activities that occur under your account.</li>
+    <li style="margin-bottom: 0.5rem;">Refrain from any activity that could damage, disable, overburden, or impair our website or interfere with any other party's use of our website.</li>
+  </ul>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">4. Product Information and Availability</h3>
+  <p style="font-size: 1rem; margin-bottom: 1rem;">
+    We strive to provide accurate descriptions and images of our produce. However, freshness, seasonality, and availability can vary. All produce offerings are subject to availability and market conditions. We reserve the right to limit the quantity of any product we supply and to discontinue any product at any time. Prices are subject to change without notice.
+  </p>
+  <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+    While we endeavor to keep the information on our site up-to-date, we do not warrant the absolute accuracy, completeness, or reliability of any product descriptions or information.
+  </p>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">5. Order Placement and Fulfillment</h3>
+  <p style="font-size: 1rem; margin-bottom: 1rem;">
+    Orders placed through our platform are considered formal inquiries or requests. All orders are subject to confirmation, which may include verification of your business details, specific product availability, pricing, and delivery arrangements. Payment terms and conditions will be established during the order confirmation process. We reserve the right to refuse or cancel any order for any reason, including limitations on quantities available for purchase, inaccuracies in product or pricing information, or problems identified by our credit and fraud avoidance department.
+  </p>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">6. Returns and Refunds</h3>
+  <p style="font-size: 1rem; margin-bottom: 1rem;">
+    Due to the perishable nature of our products, specific return and refund policies apply. These policies will be communicated directly during the order placement and confirmation process. Generally, claims for damaged or unsatisfactory produce must be made immediately upon receipt of goods.
+  </p>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">7. Intellectual Property</h3>
+  <p style="font-size: 1rem; margin-bottom: 1rem;">
+    All content on this website, including text, graphics, logos, images, and software, is the property of Tidefall Provisions or its content suppliers and protected by international copyright laws. The compilation of all content on this site is the exclusive property of Tidefall Provisions. You may not reproduce, duplicate, copy, sell, resell, or exploit any portion of the service, use of the service, or access to the service or any contact on the website through which the service is provided, without express written permission by us.
+  </p>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">8. Limitation of Liability</h3>
+  <p style="font-size: 1rem; margin-bottom: 1rem;">
+    To the fullest extent permitted by applicable law, Tidefall Provisions shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your access to or use of or inability to access or use our services; (b) any conduct or content of any third party on the services; (c) any content obtained from the services; and (d) unauthorized access, use, or alteration of your transmissions or content.
+  </p>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">9. Indemnification</h3>
+  <p style="font-size: 1rem; margin-bottom: 1rem;">
+    You agree to indemnify, defend, and hold harmless Tidefall Provisions, its affiliates, officers, directors, employees, agents, and licensors from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) that such parties may incur as a result of or arising from your (or anyone using your account's) violation of these Terms and Conditions.
+  </p>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">10. Governing Law and Jurisdiction</h3>
+  <p style="font-size: 1rem; margin-bottom: 1rem;">
+    These Terms shall be governed and construed in accordance with the laws of the State of New York, United States, without regard to its conflict of law provisions. Any legal action or proceeding arising under these Terms will be brought exclusively in the federal or state courts located in New York, New York, and you hereby consent to the personal jurisdiction and venue therein.
+  </p>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">11. Changes to Terms</h3>
+  <p style="font-size: 1rem; margin-bottom: 1rem;">
+    We reserve the right, at our sole discretion, to modify or replace these Terms and Conditions at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms.
+  </p>
+
+  <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">12. Contact Information</h3>
+  <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+    If you have any questions about these Terms and Conditions, please contact us at:
+  </p>
+  <p style="font-size: 1rem; margin-bottom: 0.5rem;">
+    Tidefall Provisions
+  </p>
+  <p style="font-size: 1rem; margin-bottom: 0.5rem;">
+    171 Jefferson Street
+  </p>
+  <p style="font-size: 1rem; margin-bottom: 0.5rem;">
+    New York, New York, 11206
+  </p>
+  <p style="font-size: 1rem; margin-bottom: 0.5rem;">
+    USA
+  </p>
+</section>
+</main>
+<footer class="bg-gradient-to-r from-oklch(0.25 0.05 140) to-oklch(0.15 0.02 160) text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm">© 2024 Tidefall Provisions. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-6">
+        <a href="./privacy.html" class="text-white hover:text-primary-light text-sm">Privacy Policy</a>
+        <a href="./tos.html" class="text-white hover:text-primary-light text-sm">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookieConsent" class="cookie-banner hidden">
+    <p>This website uses cookies to ensure you get the best experience. By continuing to use our site, you agree to our <a href="./privacy.html" class="underline hover:no-underline text-primary-light">Privacy Policy</a>.</p>
+    <button id="acceptCookies">Accept</button>
+  </div>
+
+  <script>
+    // Testimonials Carousel Logic
+    let currentSlide = 0;
+    const carousel = document.querySelector('[data-carousel-items]');
+    const totalSlides = carousel.children.length;
+
+    function showSlide(index) {
+        // Adjust for responsive display: On mobile (sm:), show 1 slide per view
+        // On larger screens (md:), show 3 slides per view, but this specific UI seems to be 1 per view on sm and 3 logical "slots" for md+.
+        // The current plan has only 3 testimonials. A true carousel would need more items or cloning.
+        // For simplicity, this will cycle through the 3 items as if they are separate slides,
+        // which works well for mobile (1 item/view) and minimally for desktop (3 items/view, but still scrolls 1 unit at a time).
+        let slideWidth = carousel.children[0].offsetWidth; // Get width of one item
+        if (window.innerWidth >= 768) { // If md breakpoint or larger
+            // Assuming 3 items visible, we effectively only have 1 scrollable "group" if totalSlides is 3.
+            // If totalSlides > 3, then it would scroll groups of 1/3 (item width)
+            // For 3 items and 3 visible, there's no actual "scroll" required.
+            // But if there were more, let's keep it robust.
+            // If we want 1 item to slide, the `translateX` should be based on 1 item.
+            // If totalSlides is 3, and we want to cycle them, current index 0,1,2 makes sense.
+            // Visually for 3 items on desktop, it likely shows all at once.
+            // So on desktop, let's just snap to first position (0) if there are 3 items.
+            // If more, it would be based on 1/3.
+            if (totalSlides <= 3) {
+                index = 0; // Show all 3 if less than or equal to 3 for desktop-like views.
+            }
+        }
+        carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        if (window.innerWidth < 768) { // Mobile behavior, 1 slide at a time
+            currentSlide = (currentSlide + 1) % totalSlides;
+        } else { // Desktop behavior, show 3 at a time, or cycle if less
+            if (totalSlides <= 3) {
+              currentSlide = 0; // If 3 or less, cycle to start visually
+            } else {
+              currentSlide = (currentSlide + 1) % totalSlides; // For more slides, behave like a normal carousel.
+            }
+        }
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        if (window.innerWidth < 768) { // Mobile behavior, 1 slide at a time
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        } else { // Desktop behavior
+            if (totalSlides <= 3) {
+              currentSlide = 0; // If 3 or less, cycle to start visually
+            } else {
+              currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            }
+        }
+        showSlide(currentSlide);
+    }
+
+    // Initialize carousel on load
+    window.addEventListener('load', () => {
+        showSlide(0);
+    });
+    // Re-adjust on resize
+    window.addEventListener('resize', () => {
+        showSlide(0); // Reset to first slide on resize to recalculate `slideWidth`
+    });
+
+    // Cookie Consent Logic
+    const cookieConsentBanner = document.getElementById('cookieConsent');
+    const acceptCookiesButton = document.getElementById('acceptCookies');
+    const COOKIE_NAME_PREFIX = "consent_"; // For dynamic name generation
+    const COOKIE_NAME = COOKIE_NAME_PREFIX + Math.random().toString(36).substring(2, 10); // Random unique name
+
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+    }
+
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    window.onload = () => {
+        if (!getCookie(COOKIE_NAME)) {
+            cookieConsentBanner.classList.remove('hidden');
+        }
+    };
+
+    acceptCookiesButton.onclick = () => {
+        setCookie(COOKIE_NAME, "accepted", 365); // Store consent for 1 year
+        cookieConsentBanner.classList.add('hidden');
+    };
+  </script>
+</body>
+</html>
